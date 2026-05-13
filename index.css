@@ -234,3 +234,28 @@
     box-sizing: border-box;
   }
 }
+@media (max-width: 480px) {
+
+  /* Hide nav links, show hamburger */
+  .navmain-nav .links-group {
+    display: none;
+  }
+
+  .navmain-nav {
+    padding: 24px;
+  }
+
+  /* Fix bio font and size */
+  .bridging-brand-creative {
+    font-family: 'Besley', serif;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  /* Fix footer padding */
+  .footer {
+    padding: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
