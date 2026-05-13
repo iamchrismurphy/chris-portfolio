@@ -1,3 +1,15 @@
+/* Max width constraints */
+.index-desktop {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 390px) {
+  .index-desktop {
+    max-width: 390px;
+    margin: 0 auto;
+  }
+}
 .index-desktop,
 .navmain-nav {
   display: flex;
