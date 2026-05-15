@@ -545,3 +545,19 @@
     width: 100%;
   }
 }
+/* Fix image overflow on desktop */
+.auto-loan-application-desktop img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.content {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.sectionphoto-frame {
+  max-width: 100%;
+  overflow: hidden;
+}
