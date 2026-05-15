@@ -460,9 +460,8 @@
 }
 .navscroll-nav {
   width: 148px;
-  height: 340px;
   margin: 0 !important;
-  position: absolute;
+  position: fixed;
   top: 96px;
   left: 64px;
   flex-shrink: 0;
@@ -500,5 +499,49 @@
 @media screen and (max-width: 450px) {
   .content {
     gap: var(--gap-16);
+  }
+}
+/* Fix main content clearing the fixed side nav */
+.main-body {
+  padding-left: 260px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix image overflow */
+.photo-icon7 {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile fixes */
+@media screen and (max-width: 420px) {
+  /* Hide side nav */
+  .navscroll-nav {
+    display: none;
+  }
+
+  /* Remove nav offset */
+  .main-body {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Hide desktop nav links, show hamburger */
+  .links-group3 {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  /* Fix content width */
+  .content {
+    width: 100%;
+  }
+
+  .layouttwo-col-section {
+    width: 100%;
   }
 }
