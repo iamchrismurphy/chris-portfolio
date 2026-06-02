@@ -209,48 +209,22 @@
     </div>
 
     <script>
-      var photoImage = document.getElementById("photoImage");
-      if (photoImage) {
-        photoImage.addEventListener("click", function (e) {
-          // Please sync "auto-loan-app-desktop" to the project
-        });
-      }
-      
-      var indexCard1 = document.getElementById("indexCard1");
-      if (indexCard1) {
-        indexCard1.addEventListener("click", function (e) {
-          // Please sync "auto_loan_faq_desktop" to the project
-        });
-      }
-      
-      var indexCard2 = document.getElementById("indexCard2");
-      if (indexCard2) {
-        indexCard2.addEventListener("click", function (e) {
-          // Please sync "mortgage_calculator_desktop" to the project
-        });
-      }
-      
-      var indexCard3 = document.getElementById("indexCard3");
-      if (indexCard3) {
-        indexCard3.addEventListener("click", function (e) {
-          // Please sync "help-me-decide-desktop" to the project
-        });
-      }
-      
-      var indexCard4 = document.getElementById("indexCard4");
-      if (indexCard4) {
-        indexCard4.addEventListener("click", function (e) {
-          // Please sync "sea-of-blue-desktop" to the project
-        });
-      }
-      </script>
-  <script>
   const workBtn = document.querySelectorAll('.text-dropdown')[1];
   const dropdown = document.querySelector('.case-studies');
   if (workBtn && dropdown) {
     dropdown.style.display = 'none';
-    workBtn.addEventListener('click', function() {
-      dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+    workBtn.addEventListener('mouseenter', function() {
+      dropdown.style.display = 'block';
+    });
+    workBtn.addEventListener('mouseleave', function() {
+      setTimeout(function() {
+        if (!dropdown.matches(':hover')) {
+          dropdown.style.display = 'none';
+        }
+      }, 100);
+    });
+    dropdown.addEventListener('mouseleave', function() {
+      dropdown.style.display = 'none';
     });
   }
 </script>
