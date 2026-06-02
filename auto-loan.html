@@ -397,9 +397,20 @@
       var christopherMurphyText = document.getElementById("christopherMurphyText");
       if (christopherMurphyText) {
         christopherMurphyText.addEventListener("click", function (e) {
-          window.location.href = "./index-desktop1.html";
+          window.location.href = "./index.html";
         });
       }
       </script>
+    <style>
+@media (max-width: 768px) {
+  .navscroll-nav { display: none !important; }
+  .main-body { padding: 0 24px; }
+  .content { padding: 0 !important; }
+  .hero-section, .impact-results, .why-this-mattered,
+  .three-obstacles, .design-framework, .redesign,
+  .stakeholder-alignment, .reflection { width: 100% !important; }
+  img { width: 100% !important; height: auto !important; }
+}
+</style>
   </body>
 </html>
