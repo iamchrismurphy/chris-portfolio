@@ -7,33 +7,59 @@ body {
   /* Figma Variables */
 
   /* Spacing */
+  --4: 4px;
+  --8: 8px;
+  --16: 16px;
+  --24: 24px;
+  --32: 32px;
+  --64: 64px;
+  --96: 96px;
   --spacing-2xl: 80px;
   --spacing-lg: 32px;
   --spacing-md: 24px;
   --spacing-sm: 16px;
+  --spacing-sm1: 16px;
   --spacing-xl: 40px;
+  --spacing-xs: 8px;
 
   /* Color */
+  --blue: #0075ef;
+  --body: #333;
   --color-black: #1a1a1a;
+  --color-black1: #1a1a1a;
   --color-blue: #0073e6;
+  --color-blue1: #0073e6;
+  --color-body: #333;
+  --color-border: #666;
   --color-muted: #666;
+  --color-muted1: #666;
+  --muted: #666;
 
   /* Common Style Variables */
 
   /* Color */
-  --color-black1: #000;
+  --color-black2: #000;
   --color-dodgerblue: #006ec8;
   --color-white: #fff;
 
   /* Gap */
+  --gap-8: 8px;
+  --gap-12: 12px;
+  --gap-16: 16px;
   --gap-20: 20px;
   --gap-24: 24px;
+  --gap-30: 30px;
   --gap-32: 32px;
   --gap-40: 40px;
+  --gap-64: 64px;
 
   /* Padding */
+  --padding-0: 0px;
   --padding-20: 20px;
   --padding-24: 24px;
+  --padding-32: 32px;
+  --padding-40: 40px;
+  --padding-52: 52px;
   --padding-80: 80px;
 
   /* Font */
@@ -41,13 +67,33 @@ body {
   --font-roboto: Roboto;
 
   /* FontSize */
+  --fs-11: 11px;
   --fs-12: 12px;
   --fs-13: 13px;
+  --fs-14: 14px;
   --fs-15: 15px;
   --fs-16: 16px;
+  --fs-22: 22px;
+  --fs-26: 26px;
+  --fs-32: 32px;
+  --fs-40: 40px;
 
   /* WidthHeights */
+  --height-4: 4px;
   --height-280: 280px;
+  --width-312: 312px;
   --width-328: 328px;
+  --width-360: 360px;
   --width-376: 376px;
+  --width-750: 750px;
+
+  /* LineHeights */
+  --lh-16: 16px;
+  --lh-22: 22px;
+  --lh-26: 26px;
+  --lh-28: 28px;
+
+  /* LetterSpacings */
+  --ls-1: 1px;
+  --ls-0_5: 0.5px;
 }
