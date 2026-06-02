@@ -621,4 +621,8 @@
   .photo-icon { width: 100% !important; height: auto !important; }
   .measured-at-the { width: 100% !important; }
   .data-and-photo { width: 100% !important; padding: 24px !important; }
+  .result-title { flex-direction: column !important; align-items: flex-start !important; }
+  .body { border-left: none !important; padding-left: 0 !important; }
+  .h1 { font-size: 48px !important; }
+  .information-section-dominated { width: 100% !important; }
 }
