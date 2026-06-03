@@ -12,91 +12,52 @@
   <body>
     <div class="page">
 
-      <!-- NAV -->
-      <nav class="nav">
-        <a class="nav-logo" href="./index.html">Christopher Murphy</a>
-
-        <!-- DESKTOP NAV LINKS -->
-        <div class="nav-links">
-          <a class="nav-link" href="./index.html">About</a>
-          <div class="nav-work-wrapper">
-            <button class="nav-link nav-work-btn" onclick="toggleWorkMenu()" aria-expanded="false">
-              Work <span class="work-arrow">↓</span>
-            </button>
-            <!-- DROPDOWN MENU -->
-            <div class="work-dropdown" id="workDropdown">
-              <a class="work-dropdown-item" href="./index.html">
-                <div class="work-dropdown-thumb"></div>
-                <div class="work-dropdown-text">
-                  <span class="work-dropdown-title">Application Redesign</span>
-                  <span class="work-dropdown-sub">UX Strategy</span>
-                </div>
-              </a>
-              <a class="work-dropdown-item" href="./index.html">
-                <div class="work-dropdown-thumb"></div>
-                <div class="work-dropdown-text">
-                  <span class="work-dropdown-title">FAQ Redesign</span>
-                  <span class="work-dropdown-sub">Info Architecture</span>
-                </div>
-              </a>
-              <a class="work-dropdown-item" href="./index.html">
-                <div class="work-dropdown-thumb"></div>
-                <div class="work-dropdown-text">
-                  <span class="work-dropdown-title">Mortgage Calculator</span>
-                  <span class="work-dropdown-sub">Design System</span>
-                </div>
-              </a>
-              <a class="work-dropdown-item" href="./index.html">
-                <div class="work-dropdown-thumb"></div>
-                <div class="work-dropdown-text">
-                  <span class="work-dropdown-title">Help Me Decide</span>
-                  <span class="work-dropdown-sub">Decision Architecture</span>
-                </div>
-              </a>
-              <a class="work-dropdown-item" href="./index.html">
-                <div class="work-dropdown-thumb"></div>
-                <div class="work-dropdown-text">
-                  <span class="work-dropdown-title">Sea of Blue</span>
-                  <span class="work-dropdown-sub">Behavior Economics</span>
-                </div>
-              </a>
+      <!-- NAV (copied from index.html) -->
+      <section class="nav" style="position:relative;">
+        <div class="christopher-murphy4">Christopher Murphy</div>
+        <nav class="button-group">
+          <div class="about3">
+            <div class="text-dropdown">
+              <div class="work3">About</div>
+              <img class="dropdown-icon" alt="" src="./public/dropdown.svg" />
             </div>
           </div>
-          <a class="nav-link" href="./index.html">Craft</a>
+          <div class="about3">
+            <div class="text-dropdown">
+              <div class="work5">Work</div>
+              <img class="dropdown-icon2" alt="" src="./public/dropdown.svg" />
+            </div>
+          </div>
+          <div class="about3">
+            <div class="text-dropdown">
+              <div class="work3">Craft</div>
+              <img class="dropdown-icon" alt="" src="./public/dropdown.svg" />
+            </div>
+          </div>
+        </nav>
+        <div class="case-studies" style="display:none; position:absolute; top:64px; right:130px; background:white; border-radius:4px; padding:24px; z-index:1000; width:206px; box-shadow: 0 4px 24px rgba(0,0,0,0.1);">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+            <div style="width:64px; height:64px; background:#f2f2f2; border-radius:4px; flex-shrink:0;"></div>
+            <div style="display:flex; flex-direction:column; gap:4px; width:139px;"><div style="font-family:Roboto,sans-serif; font-weight:600; color:#000; font-size:14px; line-height:22px;">Application Redesign</div><div style="font-family:Roboto,sans-serif; font-weight:400; color:#666; font-size:14px; line-height:22px;">UX Strategy</div></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+            <div style="width:64px; height:64px; background:#f2f2f2; border-radius:4px; flex-shrink:0;"></div>
+            <div style="display:flex; flex-direction:column; gap:4px; width:139px;"><div style="font-family:Roboto,sans-serif; font-weight:600; color:#000; font-size:14px; line-height:22px;">FAQ Redesign</div><div style="font-family:Roboto,sans-serif; font-weight:400; color:#666; font-size:14px; line-height:22px;">Info Architecture</div></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+            <div style="width:64px; height:64px; background:#f2f2f2; border-radius:4px; flex-shrink:0;"></div>
+            <div style="display:flex; flex-direction:column; gap:4px; width:139px;"><div style="font-family:Roboto,sans-serif; font-weight:600; color:#000; font-size:14px; line-height:22px;">Mortgage Calculator</div><div style="font-family:Roboto,sans-serif; font-weight:400; color:#666; font-size:14px; line-height:22px;">Design System</div></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+            <div style="width:64px; height:64px; background:#f2f2f2; border-radius:4px; flex-shrink:0;"></div>
+            <div style="display:flex; flex-direction:column; gap:4px; width:139px;"><div style="font-family:Roboto,sans-serif; font-weight:600; color:#000; font-size:14px; line-height:22px;">Help Me Decide</div><div style="font-family:Roboto,sans-serif; font-weight:400; color:#666; font-size:14px; line-height:22px;">Decision Architecture</div></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <div style="width:64px; height:64px; background:#f2f2f2; border-radius:4px; flex-shrink:0;"></div>
+            <div style="display:flex; flex-direction:column; gap:4px; width:139px;"><div style="font-family:Roboto,sans-serif; font-weight:600; color:#000; font-size:14px; line-height:22px;">Sea of Blue</div><div style="font-family:Roboto,sans-serif; font-weight:400; color:#666; font-size:14px; line-height:22px;">Behavior Economics</div></div>
+          </div>
         </div>
-
-        <!-- MOBILE HAMBURGER -->
-        <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-
-      <!-- MOBILE MENU -->
-      <div class="mobile-menu" id="mobileMenu">
-        <a class="mobile-menu-link" href="./index.html">About</a>
-        <a class="mobile-menu-link" href="./index.html">Work</a>
-        <a class="mobile-menu-link" href="./index.html">Craft</a>
-      </div>
-
-      <script>
-        function toggleWorkMenu() {
-          const btn = document.querySelector('.nav-work-btn');
-          const dropdown = document.getElementById('workDropdown');
-          const isOpen = dropdown.classList.contains('open');
-          dropdown.classList.toggle('open');
-          btn.classList.toggle('active');
-          btn.setAttribute('aria-expanded', !isOpen);
-        }
-        function toggleMobileMenu() {
-          document.getElementById('mobileMenu').classList.toggle('open');
-        }
-        document.addEventListener('click', function(e) {
-          if (!e.target.closest('.nav-work-wrapper')) {
-            document.getElementById('workDropdown').classList.remove('open');
-            document.querySelector('.nav-work-btn').classList.remove('active');
-          }
-        });
-      </script>
+      </section>
 
       <!-- MAIN BODY -->
       <div class="main-body">
@@ -322,5 +283,26 @@
       </footer>
 
     </div><!-- end page -->
+
+    <script>
+      const workBtn = document.querySelectorAll('.text-dropdown')[1];
+      const dropdown = document.querySelector('.case-studies');
+      if (workBtn && dropdown) {
+        dropdown.style.display = 'none';
+        workBtn.addEventListener('mouseenter', function() {
+          dropdown.style.display = 'block';
+        });
+        workBtn.addEventListener('mouseleave', function() {
+          setTimeout(function() {
+            if (!dropdown.matches(':hover')) {
+              dropdown.style.display = 'none';
+            }
+          }, 100);
+        });
+        dropdown.addEventListener('mouseleave', function() {
+          dropdown.style.display = 'none';
+        });
+      }
+    </script>
   </body>
 </html>
