@@ -1,0 +1,119 @@
+/* ============================================
+   SITE NAV — reusable across all pages
+   Matches Figma button_group + hover (#e0e0e0)
+   ============================================ */
+
+.site-header {
+  width: 100%;
+}
+
+.site-nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 100;
+  font-family: 'Roboto', sans-serif;
+}
+
+.site-nav__logo {
+  font-size: 14px;
+  line-height: 22px;
+  color: #1a1a1a;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.site-nav__logo:hover {
+  text-decoration: underline;
+}
+
+.site-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+a.site-nav__link:hover,
+.site-nav__work:hover .site-nav__link--work {
+  background-color: #e0e0e0;
+}
+
+.site-nav__chevron {
+  width: 6.667px;
+  height: 4px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* --- WORK DROPDOWN --- */
+.site-nav__work {
+  position: relative;
+}
+
+.site-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% - 4px);
+  left: 0;
+  background: #fff;
+  border-radius: 4px;
+  padding: 24px;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  z-index: 200;
+  min-width: 240px;
+}
+
+.site-nav__work:hover .site-nav__dropdown,
+.site-nav__work:focus-within .site-nav__dropdown {
+  display: flex;
+}
+
+.site-nav__dropdown-link {
+  font-size: 14px;
+  line-height: 22px;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+.site-nav__dropdown-link:hover {
+  text-decoration: underline;
+}
+
+.site-nav__dropdown-link.is-current {
+  color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  .site-nav {
+    padding: 0 24px;
+    height: 64px;
+  }
+}
