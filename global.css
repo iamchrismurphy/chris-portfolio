@@ -34,6 +34,8 @@ body {
   --color-muted: #666;
   --color-muted1: #666;
   --muted: #666;
+  --gray-5: #e0e0e0;
+  --white: #fff;
 
   /* Common Style Variables */
 
@@ -96,4 +98,14 @@ body {
   /* LetterSpacings */
   --ls-1: 1px;
   --ls-0_5: 0.5px;
+
+  /* Site component assets */
+  --icon-linkedin: url('./public/icon_linkedin.svg');
+  --icon-resume: url('./public/icon_resume.svg');
+  --nav-arrow-left: url('./public/nav_arrow_left.svg');
+  --nav-arrow-right: url('./public/nav_arrow_right.svg');
+
+  /* Layout */
+  --scroll-offset: 24px;
+  --dropdown-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }

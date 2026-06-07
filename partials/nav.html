@@ -1,6 +1,6 @@
 <!--
   SITE NAV — copy this block into every page.
-  Requires: global.css, nav.css, Roboto font
+  Requires: global.css, nav.css, Roboto font, site.js
 -->
 <header class="site-header">
   <nav class="site-nav" aria-label="Main">
@@ -22,5 +22,18 @@
       </div>
       <a class="site-nav__link" href="./craft.html">Craft</a>
     </div>
+    <button type="button" class="site-nav__burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-mobile-menu">
+      <img src="./public/mobile_burger.svg" alt="" width="20" height="20" />
+    </button>
   </nav>
+  <div class="site-nav__mobile-menu" id="site-mobile-menu" hidden>
+    <a class="site-nav__mobile-link" href="./about.html">About</a>
+    <p class="site-nav__mobile-label">Work</p>
+    <a class="site-nav__mobile-sublink" href="./auto-loan.html" data-page="auto-loan">Auto Loan Application</a>
+    <a class="site-nav__mobile-sublink" href="./help-me-decide.html" data-page="help-me-decide">Help Me Decide</a>
+    <a class="site-nav__mobile-sublink" href="./sea-of-blue.html" data-page="sea-of-blue">Sea of Blue</a>
+    <a class="site-nav__mobile-sublink" href="./mortgage-calculator.html" data-page="mortgage-calculator">Mortgage Calculator</a>
+    <a class="site-nav__mobile-sublink" href="./auto-loan-faq.html" data-page="auto-loan-faq">Auto Loan FAQ</a>
+    <a class="site-nav__mobile-link" href="./craft.html">Craft</a>
+  </div>
 </header>

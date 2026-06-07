@@ -1,10 +1,12 @@
 /* ============================================
    SITE NAV — reusable across all pages
-   Matches Figma button_group + hover (#e0e0e0)
+   Dropdown: Figma 452:1972 | Hover #e0e0e0
    ============================================ */
 
 .site-header {
   width: 100%;
+  position: relative;
+  z-index: 100;
 }
 
 .site-nav {
@@ -18,39 +20,39 @@
   padding: 0 64px;
   box-sizing: border-box;
   position: relative;
-  z-index: 100;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-roboto, 'Roboto'), sans-serif;
 }
 
 .site-nav__logo {
-  font-size: 14px;
-  line-height: 22px;
-  color: #1a1a1a;
+  font-size: var(--fs-14, 14px);
+  line-height: var(--lh-22, 22px);
+  color: var(--color-black, #1a1a1a);
   text-decoration: none;
   flex-shrink: 0;
 }
 
 .site-nav__logo:hover {
-  text-decoration: underline;
+  color: var(--blue, #0075ef);
+  text-decoration: none;
 }
 
 .site-nav__links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--8, 8px);
 }
 
 .site-nav__link {
   display: flex;
   align-items: center;
-  gap: 4px;
-  padding: 16px;
-  border-radius: 8px;
-  font-size: 11px;
-  line-height: 16px;
-  color: #1a1a1a;
+  gap: var(--4, 4px);
+  padding: var(--16, 16px);
+  border-radius: var(--8, 8px);
+  font-size: var(--fs-11, 11px);
+  line-height: var(--lh-16, 16px);
+  color: var(--color-black, #1a1a1a);
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-roboto, 'Roboto'), sans-serif;
   background: none;
   border: none;
   cursor: pointer;
@@ -59,7 +61,7 @@
 
 a.site-nav__link:hover,
 .site-nav__work:hover .site-nav__link--work {
-  background-color: #e0e0e0;
+  background-color: var(--gray-5, #e0e0e0);
 }
 
 .site-nav__chevron {
@@ -67,9 +69,10 @@ a.site-nav__link:hover,
   height: 4px;
   display: block;
   flex-shrink: 0;
+  transition: transform 0.15s ease;
 }
 
-/* --- WORK DROPDOWN --- */
+/* --- WORK DROPDOWN (Figma 452:1972) --- */
 .site-nav__work {
   position: relative;
 }
@@ -77,16 +80,17 @@ a.site-nav__link:hover,
 .site-nav__dropdown {
   display: none;
   position: absolute;
-  top: calc(100% - 4px);
-  left: 0;
-  background: #fff;
-  border-radius: 4px;
-  padding: 24px;
+  top: calc(100% + 4px);
+  right: 0;
+  left: auto;
+  background: var(--white, #fff);
+  border-radius: var(--4, 4px);
+  padding: var(--24, 24px);
   flex-direction: column;
-  gap: 16px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  gap: var(--16, 16px);
   z-index: 200;
-  min-width: 240px;
+  min-width: 0;
+  box-shadow: var(--dropdown-shadow, 0 2px 12px rgba(0, 0, 0, 0.08));
 }
 
 .site-nav__work:hover .site-nav__dropdown,
@@ -94,26 +98,136 @@ a.site-nav__link:hover,
   display: flex;
 }
 
+.site-nav__work:hover .site-nav__chevron {
+  transform: rotate(180deg);
+}
+
 .site-nav__dropdown-link {
-  font-size: 14px;
-  line-height: 22px;
-  color: #1a1a1a;
+  font-size: var(--fs-14, 14px);
+  line-height: var(--lh-22, 22px);
+  color: var(--muted, #666);
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
+  font-family: var(--font-roboto, 'Roboto'), sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
 }
 
 .site-nav__dropdown-link:hover {
-  text-decoration: underline;
+  opacity: 0.7;
+  text-decoration: none;
 }
 
 .site-nav__dropdown-link.is-current {
-  color: #666;
+  color: var(--muted, #666);
+  opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
+/* --- MOBILE BURGER (hidden on desktop) --- */
+.site-nav__burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 14px;
+  background: var(--white, #fff);
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.site-nav__burger img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+/* --- MOBILE MENU PANEL (hidden on desktop) --- */
+.site-nav__mobile-menu {
+  display: none;
+}
+
+.site-nav__mobile-menu[hidden] {
+  display: none !important;
+}
+
+/* ============================================
+   TABLET — 391px to 768px
+   ============================================ */
+@media screen and (min-width: 391px) and (max-width: 768px) {
   .site-nav {
-    padding: 0 24px;
-    height: 64px;
+    height: 80px;
+    padding: 0 40px;
+  }
+}
+
+/* ============================================
+   MOBILE — max-width: 390px only
+   ============================================ */
+@media screen and (max-width: 390px) {
+  .site-nav {
+    height: auto;
+    padding: 64px 24px 32px;
+  }
+
+  .site-nav__links,
+  .site-nav__dropdown {
+    display: none !important;
+  }
+
+  .site-nav__burger {
+    display: flex;
+  }
+
+  .site-header.menu-open .site-nav__mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 24px 32px;
+    box-sizing: border-box;
+    background: var(--white, #fff);
+  }
+
+  .site-nav__mobile-link,
+  .site-nav__mobile-sublink {
+    display: block;
+    font-size: var(--fs-14, 14px);
+    line-height: var(--lh-22, 22px);
+    color: var(--color-black, #1a1a1a);
+    text-decoration: none;
+    font-family: var(--font-roboto, 'Roboto'), sans-serif;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray-5, #e0e0e0);
+  }
+
+  .site-nav__mobile-sublink {
+    padding-left: 16px;
+    font-weight: 400;
+    color: var(--muted, #666);
+  }
+
+  .site-nav__mobile-sublink.is-current {
+    color: var(--muted, #666);
+    opacity: 1;
+  }
+
+  .site-nav__mobile-label {
+    font-size: var(--fs-14, 14px);
+    line-height: var(--lh-22, 22px);
+    font-weight: 600;
+    color: var(--color-black, #1a1a1a);
+    font-family: var(--font-roboto, 'Roboto'), sans-serif;
+    margin: 0;
+    padding: 16px 0 8px;
+    border-bottom: 1px solid var(--gray-5, #e0e0e0);
+  }
+
+  .site-nav__mobile-link:last-child {
+    border-bottom: none;
   }
 }

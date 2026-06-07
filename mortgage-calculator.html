@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./nav.css" />
+    <link rel="stylesheet" href="./site.css" />
+    <link rel="stylesheet" href="./case-study.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Besley:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
+    <title>Mortgage Calculator — Christopher Murphy</title>
+  </head>
+  <body data-page="mortgage-calculator">
+    <div class="page">
+
+      <header class="site-header">
+        <nav class="site-nav" aria-label="Main">
+          <a class="site-nav__logo" href="./index.html">Christopher Murphy</a>
+          <div class="site-nav__links">
+            <a class="site-nav__link" href="./about.html">About</a>
+            <div class="site-nav__work">
+              <div class="site-nav__link site-nav__link--work" aria-haspopup="true">
+                Work
+                <img class="site-nav__chevron" alt="" src="./public/dropdown.svg" />
+              </div>
+              <div class="site-nav__dropdown" role="menu">
+                <a class="site-nav__dropdown-link" href="./auto-loan.html" data-page="auto-loan" role="menuitem">Auto Loan Application</a>
+                <a class="site-nav__dropdown-link" href="./help-me-decide.html" data-page="help-me-decide" role="menuitem">Help Me Decide</a>
+                <a class="site-nav__dropdown-link" href="./sea-of-blue.html" data-page="sea-of-blue" role="menuitem">Sea of Blue</a>
+                <a class="site-nav__dropdown-link" href="./mortgage-calculator.html" data-page="mortgage-calculator" role="menuitem">Mortgage Calculator</a>
+                <a class="site-nav__dropdown-link" href="./auto-loan-faq.html" data-page="auto-loan-faq" role="menuitem">Auto Loan FAQ</a>
+              </div>
+            </div>
+            <a class="site-nav__link" href="./craft.html">Craft</a>
+          </div>
+          <button type="button" class="site-nav__burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-mobile-menu">
+            <img src="./public/mobile_burger.svg" alt="" width="20" height="20" />
+          </button>
+        </nav>
+        <div class="site-nav__mobile-menu" id="site-mobile-menu" hidden>
+          <a class="site-nav__mobile-link" href="./about.html">About</a>
+          <p class="site-nav__mobile-label">Work</p>
+          <a class="site-nav__mobile-sublink" href="./auto-loan.html" data-page="auto-loan">Auto Loan Application</a>
+          <a class="site-nav__mobile-sublink" href="./help-me-decide.html" data-page="help-me-decide">Help Me Decide</a>
+          <a class="site-nav__mobile-sublink" href="./sea-of-blue.html" data-page="sea-of-blue">Sea of Blue</a>
+          <a class="site-nav__mobile-sublink" href="./mortgage-calculator.html" data-page="mortgage-calculator">Mortgage Calculator</a>
+          <a class="site-nav__mobile-sublink" href="./auto-loan-faq.html" data-page="auto-loan-faq">Auto Loan FAQ</a>
+          <a class="site-nav__mobile-link" href="./craft.html">Craft</a>
+        </div>
+      </header>
+
+      <!-- MAIN BODY -->
+      <div class="main-body">
+
+        <!-- STICKY SIDE NAV -->
+        <div class="side-nav-wrapper">
+          <div class="side-nav">
+            <a class="side-nav-link active" href="#overview">Overview</a>
+            <a class="side-nav-link" href="#impact">Impact &amp; Results</a>
+            <a class="side-nav-link" href="#why">Why This Mattered</a>
+            <a class="side-nav-link" href="#functional-gap">The Functional Gap</a>
+            <a class="side-nav-link" href="#vendor-constraints">Vendor Constraints</a>
+            <a class="side-nav-link" href="#final-design">The Final Design</a>
+            <a class="side-nav-link" href="#reflection">Reflection</a>
+          </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+          <!-- HERO SECTION -->
+          <section class="hero-section" id="overview">
+            <div class="eyebrow-h2">
+              <p class="eyebrow">DESIGN SYSTEMS</p>
+              <h1 class="h1">Mortgage Calculator Design System</h1>
+            </div>
+            <div class="content-metadata">
+              <p class="body-text">A generic vendor tool was failing members at a critical decision point. Took end-to-end ownership of design strategy and vendor collaboration to redesign the mortgage calculator and establish the brand pattern that carried all 15 tools forward.</p>
+              <div class="metadata">
+                <div class="meta-col">
+                  <p class="meta-label">Role</p>
+                  <p class="meta-value">Lead UX Designer</p>
+                </div>
+                <div class="meta-col">
+                  <p class="meta-label">TIMELINE</p>
+                  <p class="meta-value">4 months</p>
+                </div>
+                <div class="meta-col meta-col--teams">
+                  <p class="meta-label">Teams</p>
+                  <p class="meta-value">Content, Compliance, Legal</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- HERO PHOTO -->
+          <div class="photo-block">
+            <img class="photo-img" src="./public/mortgage_calculator_hero.png" alt="Mortgage Calculator Design" />
+            <p class="photo-caption">Mortgage Calculator Design</p>
+          </div>
+
+          <!-- IMPACT & RESULTS -->
+          <section class="section" id="impact">
+            <div class="eyebrow-h2">
+              <p class="eyebrow">IMPACT AND RESULTS</p>
+              <h2 class="h2">A scalable system improved trust and accelerated delivery.</h2>
+            </div>
+            <div class="two-col-grid">
+              <div class="h3-block">
+                <h3 class="h3">Delivered a fully branded calculator suite</h3>
+                <p class="body-text">Transformed LeadFusion's generic out-of-the-box mortgage calculator into a brand-aligned, accessible member experience and established the component library that carried all 15 remaining tools forward.</p>
+              </div>
+              <div class="h3-block">
+                <h3 class="h3">Reusable patterns eliminated redundant design work</h3>
+                <p class="body-text">The mortgage calculator pattern became the reusable foundation for the full suite. Subsequent calculators were implemented without starting from scratch, significantly reducing design and development overhead across every future tool.</p>
+              </div>
+              <div class="h3-block">
+                <h3 class="h3">Vendor relationship became a design asset</h3>
+                <p class="body-text">Early, consistent collaboration with LeadFusion surfaced configuration options that were not in their documentation. That relationship turned potential blockers into workable solutions and accelerated delivery throughout the project.</p>
+              </div>
+              <div class="h3-block">
+                <h3 class="h3">Development equipped for long-term independence</h3>
+                <p class="body-text">Detailed constraint documentation and reusable specs gave the development team everything needed to implement and maintain all 15 calculators without requiring additional design involvement for each one.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- WHY THIS MATTERED -->
+          <section class="section" id="why">
+            <div class="eyebrow-h2">
+              <p class="eyebrow">Why this mattered</p>
+              <h2 class="h2">The site had no calculators. Competitors did.</h2>
+            </div>
+            <div class="h3-block">
+              <p class="body-text">Financial calculators are essential, especially for members weighing mortgages, auto loans, and refinancing decisions. Our website had none. Competitors offered them by default, and the absence was creating real friction at the moments members needed confidence most.</p>
+              <br>
+              <p class="body-text">Building custom calculators from scratch would require months of engineering resources that were not available. The solution was LeadFusion, an industry-standard platform already used across financial institutions. But their default output was generic, visually inconsistent, and completely disconnected from our brand.</p>
+              <br>
+              <p class="body-text">The challenge was not building calculators. It was making someone else's tool feel like ours, at scale, under time pressure, within a platform designed for generic implementation across hundreds of institutions.</p>
+            </div>
+          </section>
+
+          <!-- THE FUNCTIONAL GAP -->
+          <section class="section" id="functional-gap">
+            <div class="eyebrow-h2">
+              <p class="eyebrow">THE FUNCTIONAL GAP</p>
+              <h2 class="h2">Two problems made this harder than a standard redesign.</h2>
+            </div>
+            <div class="two-col">
+              <div class="col">
+                <div class="h3-block">
+                  <h3 class="h3">No Calculators. No Brand. No Trust.</h3>
+                  <p class="body-text">Our mortgage pages had no functioning calculators at all. Members could not estimate payments or build confidence before applying. When LeadFusion provided a solution, it worked functionally but looked completely disconnected from our brand. Typography, spacing, and interaction states were all misaligned with our design system, undermining the trust the tool was supposed to build.</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="h3-block">
+                  <h3 class="h3">Working Within Hard Limits</h3>
+                  <p class="body-text">LeadFusion's framework allowed styling but locked down layout logic and interaction patterns. With 15 calculators to transform and limited runway, the mortgage calculator had to establish a pattern strong enough to carry every tool that followed. There was no room to start over for each one.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- UNBRANDED PHOTO -->
+          <div class="photo-block">
+            <img class="photo-img" src="./public/mortgage_calculator_unbranded.png" alt="LeadFusion calculator out of the box with no branding." />
+            <p class="photo-caption">LeadFusion calculator out of the box with no branding.</p>
+          </div>
+
+          <!-- VENDOR CONSTRAINTS -->
+          <section class="section" id="vendor-constraints">
+            <div class="eyebrow-h2">
+              <p class="eyebrow">VENDOR CONSTRAINTS</p>
+              <h2 class="h2">Understanding the system came before designing within it.</h2>
+            </div>
+            <div class="two-col-grid">
+              <div class="h3-block">
+                <h3 class="h3">Mapping the System</h3>
+                <p class="body-text">Before touching a single component, I met with LeadFusion directly to document what could and could not be modified. I then mapped our full design system, typography, color, spacing, buttons, form patterns, and WCAG requirements, against what the platform permitted. The output was a clear constraint map: which brand standards applied directly, which needed a compromise equivalent, and which could not be touched at all.</p>
+              </div>
+              <div class="h3-block">
+                <h3 class="h3">Competitive Analysis</h3>
+                <p class="body-text">Most banks using LeadFusion defaulted entirely to out-of-the-box styling. A smaller number used available customization to create a more cohesive, native-feeling experience. That gap confirmed the opportunity: meaningful brand expression within the vendor's constraints was achievable, it just had not been treated as a priority.</p>
+              </div>
+              <div class="h3-block">
+                <h3 class="h3">Brand Translation</h3>
+                <p class="body-text">I applied our typography, color, spacing, and interaction states wherever the platform permitted. Where direct application was not possible, I identified the closest allowed equivalent that maintained brand cohesion. LeadFusion's progressive disclosure patterns were already built into the framework. My job was not to redesign that structure. It was to make sure the experience felt native to the product, not generic.</p>
+              </div>
+              <div class="h3-block">
+                <h3 class="h3">Documentation as the Scalable Deliverable</h3>
+                <p class="body-text">Reusable patterns and detailed constraint documentation were not supplementary. They were the mechanism that made the entire system work beyond the mortgage tool. The goal was a handoff that made all 15 calculators implementable without additional design involvement for each one.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- MAPPING PHOTO -->
+          <div class="photo-block">
+            <img class="photo-img" src="./public/mortgage_calculator_mapping.png" alt="Mapping what the platform allowed against what the brand required." />
+            <p class="photo-caption">Mapping what the platform allowed against what the brand required.</p>
+          </div>
+
+          <!-- THE FINAL DESIGN -->
+          <section class="section" id="final-design">
+            <div class="eyebrow-h2">
+              <p class="eyebrow">THE FINAL DESIGN</p>
+              <h2 class="h2">The mortgage calculator became the blueprint.</h2>
+            </div>
+            <div class="h3-block">
+              <p class="body-text">The redesigned mortgage calculator established a fully branded, WCAG-compliant experience built within LeadFusion's constraints, with our typography, color, form patterns, and interaction states applied consistently throughout. Custom-sized inputs, clear visual hierarchy, and logical information architecture replaced the generic default layout.</p>
+              <br>
+              <p class="body-text">The component library and documentation package built alongside it gave development a reusable foundation for all remaining calculators. Each subsequent tool could be implemented consistently without restarting the design process, a direct result of treating the mortgage calculator not as a one-off project but as the foundation of a system.</p>
+            </div>
+          </section>
+
+          <!-- FINAL DESIGN PHOTO -->
+          <div class="photo-block">
+            <img class="photo-img" src="./public/mortgage_calculator_final.png" alt="The same platform. A completely different experience." />
+            <p class="photo-caption">The same platform. A completely different experience.</p>
+          </div>
+
+          <!-- REFLECTION -->
+          <section class="section" id="reflection">
+            <div class="eyebrow-h2">
+              <p class="eyebrow">REFLECTION</p>
+              <h2 class="h2">What vendor work taught me.</h2>
+            </div>
+            <div class="h3-block">
+              <p class="body-text">Constraints drove better focus than freedom would have. Knowing exactly what LeadFusion allowed forced me to identify which brand elements carried the most trust signal and prioritize those. The relationship with the vendor turned out to be as important as the design work itself. Surfacing undocumented configuration options in early collaboration changed the entire delivery timeline. If I did this again I would establish that vendor relationship in week one, not after the first round of constraints became blockers.</p>
+            </div>
+          </section>
+
+          <!-- NEXT PROJECT NAV -->
+          <div class="next-project" id="next-project"></div>
+
+        </div><!-- end content -->
+      </div><!-- end main-body -->
+
+      <footer class="site-footer">
+        <div class="footer">
+          <div class="footer-links">
+            <a class="footer-link" href="https://www.linkedin.com/in/seemurphy11/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="footer-link" href="./public/Christopher_Murphy_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          </div>
+          <p class="footer-copy">©2026 Christopher Murphy</p>
+        </div>
+      </footer>
+
+    </div><!-- end page -->
+
+    <script src="./site.js"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 /* ============================================
-   HELP ME DECIDE CASE STUDY — matches Figma
+   CASE STUDY PAGES — shared typography & layout
    ============================================ */
 
 .page {
@@ -12,7 +12,6 @@
   color: #1a1a1a;
 }
 
-/* --- SECTIONS --- */
 .section,
 .hero-section {
   display: flex;
@@ -23,7 +22,10 @@
   text-align: left;
 }
 
-/* --- EYEBROW + H2 --- */
+.section--tight {
+  gap: 16px;
+}
+
 .eyebrow-h2 {
   display: flex;
   flex-direction: column;
@@ -69,7 +71,6 @@
   margin: 0;
 }
 
-/* --- BODY TEXT --- */
 .body-text {
   font-size: 14px;
   line-height: 22px;
@@ -78,7 +79,14 @@
   margin: 0;
 }
 
-/* --- METADATA (override index.css display:none) --- */
+.body-text-lg {
+  font-size: 15px;
+  line-height: 26px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
 .hero-section .content-metadata {
   display: flex;
   flex-direction: column;
@@ -127,7 +135,6 @@
   margin: 0;
 }
 
-/* --- PHOTO BLOCK --- */
 .photo-block {
   width: 100%;
   display: flex;
@@ -152,7 +159,6 @@
   margin: 0;
 }
 
-/* --- IMPACT STAT --- */
 .impact-stat {
   width: 768px;
   max-width: 100%;
@@ -193,11 +199,28 @@
   padding-left: 24px;
 }
 
-/* --- H3 BLOCK --- */
 .h3-block {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
+}
+
+.two-col {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+}
+
+.col {
+  flex: 1;
+  min-width: 0;
+}
+
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
   width: 100%;
 }
 
@@ -224,13 +247,21 @@
     font-size: 21px;
     line-height: 27px;
   }
+
+  .two-col {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .two-col-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================================
    MOBILE — max-width: 390px only
    ============================================ */
 @media screen and (max-width: 390px) {
-  /* Typography */
   .h1 {
     font-size: 24px;
     line-height: 30px;
@@ -246,7 +277,8 @@
     line-height: 22px;
   }
 
-  .body-text {
+  .body-text,
+  .body-text-lg {
     font-size: 14px;
     line-height: 22px;
   }
@@ -267,7 +299,6 @@
     line-height: 16px;
   }
 
-  /* Section spacing */
   .hero-section {
     gap: 16px;
   }
@@ -294,7 +325,6 @@
     min-width: 0;
   }
 
-  /* Photos — 342px square in 390px viewport */
   .photo-block {
     width: 100%;
     gap: 16px;
@@ -306,7 +336,6 @@
     object-fit: cover;
   }
 
-  /* Impact stat — stacked mobile layout */
   .impact-stat {
     flex-direction: column;
     align-items: stretch;
@@ -338,5 +367,15 @@
 
   #impact {
     gap: 24px;
+  }
+
+  .two-col {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .two-col-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }

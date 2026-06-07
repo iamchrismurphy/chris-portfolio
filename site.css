@@ -1,10 +1,77 @@
 /* ============================================
+   CASE STUDY LAYOUT + SIDE NAV
+   Side nav: Figma 105:970
+   ============================================ */
+
+.main-body {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 64px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 42px;
+  position: relative;
+}
+
+.side-nav-wrapper {
+  width: 148px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.side-nav {
+  width: 148px;
+  position: sticky;
+  top: 32px;
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--8, 8px);
+}
+
+.side-nav-link {
+  font-size: var(--fs-11, 11px);
+  line-height: var(--lh-16, 16px);
+  font-weight: 400;
+  color: var(--muted, #666);
+  text-decoration: none;
+  font-family: var(--font-roboto, 'Roboto'), sans-serif;
+  width: 100%;
+}
+
+.side-nav-link.active {
+  color: var(--blue, #0075ef);
+}
+
+.side-nav-link:hover:not(.active) {
+  color: var(--muted, #666);
+}
+
+.content {
+  width: 768px;
+  max-width: 768px;
+  flex-shrink: 0;
+  padding: 0 0 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* Scroll offset for in-page anchor jumps */
+.hero-section[id],
+.section[id] {
+  scroll-margin-top: var(--scroll-offset, 24px);
+}
+
+/* ============================================
    SITE FOOTER + NEXT PROJECT — reusable
+   Footer: Figma 76:1377 | Next project: 105:848
    ============================================ */
 
 .site-footer {
   width: 100%;
-  border-top: 1px solid #0075ef;
+  border-top: 1px solid var(--blue, #0075ef);
 }
 
 .footer {
@@ -14,86 +81,168 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 96px 52px;
+  padding: var(--64, 64px) var(--padding-52, 52px);
   box-sizing: border-box;
-  font-size: 11px;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-roboto, 'Roboto'), sans-serif;
+  overflow: hidden;
+}
+
+/* Copyright left, icons right (Figma order) */
+.footer-copy {
+  order: 1;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.footer-copy::after {
+  content: "©️2026 Christopher Murphy. All rights reserved.";
+  font-size: var(--fs-11, 11px);
+  line-height: var(--lh-16, 16px);
+  color: var(--muted, #666);
+  font-weight: 400;
+  white-space: nowrap;
 }
 
 .footer-links {
+  order: 2;
   display: flex;
-  gap: 32px;
+  gap: var(--24, 24px);
   align-items: center;
+  flex-shrink: 0;
 }
 
 .footer-link {
-  font-size: 11px;
-  line-height: 16px;
-  color: #666;
+  display: block;
+  width: 16px;
+  height: 16px;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
   text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  overflow: hidden;
+}
+
+.footer-link[href*="linkedin"] {
+  background-image: var(--icon-linkedin);
+}
+
+.footer-link[href*="Resume"],
+.footer-link[href$=".pdf"] {
+  background-image: var(--icon-resume);
 }
 
 .footer-link:hover {
-  text-decoration: underline;
+  opacity: 0.7;
+  text-decoration: none;
 }
 
-.footer-copy {
-  font-size: 11px;
-  line-height: 16px;
-  color: #1a1a1a;
-  margin: 0;
-}
-
-/* --- NEXT PROJECT (Figma node 105:848) --- */
+/* --- NEXT PROJECT (Figma 105:848) --- */
 .next-project {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  border-top: 1px solid #666;
-  padding: 32px 0;
+  border-top: 1px solid var(--color-border, #666);
+  padding: var(--32, 32px) 0;
   box-sizing: border-box;
-  min-height: 102px;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-roboto, 'Roboto'), sans-serif;
 }
 
 .next-project-link {
-  font-size: 14px;
-  line-height: 22px;
-  color: #1a1a1a;
+  font-size: var(--fs-14, 14px);
+  line-height: var(--lh-22, 22px);
+  font-weight: 400;
+  color: var(--muted, #666);
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: var(--4, 4px);
 }
 
 .next-project-link:hover {
-  text-decoration: underline;
+  opacity: 0.7;
+  text-decoration: none;
 }
 
 .next-project-link .arrow {
-  font-size: 32px;
-  line-height: 1;
+  display: block;
+  width: 5px;
+  height: 12px;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
-@media screen and (max-width: 768px) {
+.next-project-link:first-child .arrow {
+  background-image: var(--nav-arrow-left);
+}
+
+.next-project-link:last-child .arrow {
+  background-image: var(--nav-arrow-right);
+}
+
+/* ============================================
+   TABLET — 391px to 768px
+   ============================================ */
+@media screen and (min-width: 391px) and (max-width: 768px) {
+  .main-body {
+    padding: 0 40px;
+    gap: 32px;
+  }
+
+  .side-nav-wrapper,
+  .side-nav {
+    width: 120px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 100%;
+    flex: 1;
+    min-width: 0;
+    gap: 48px;
+    padding: 0 0 48px;
+  }
+
   .footer {
+    padding: var(--64, 64px) 40px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .main-body {
+    padding: 0 24px;
     flex-direction: column;
-    align-items: center;
-    padding: 64px 24px;
-    gap: 32px;
-    text-align: center;
+    gap: 0;
   }
 
-  .footer-links {
-    flex-direction: column;
-    gap: 24px;
+  .side-nav-wrapper {
+    display: none;
   }
 
-  .next-project {
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-    min-height: auto;
+  .content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0 32px;
+    gap: 48px;
+  }
+
+  .footer {
+    padding: var(--32, 32px) var(--24, 24px);
+  }
+
+  .footer-copy::after {
+    white-space: normal;
   }
 }
